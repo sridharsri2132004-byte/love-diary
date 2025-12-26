@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>A Safe Place for You</title>
+
+<style>
+    body {
+        background: #efe9e3;
+        font-family: "Georgia", serif;
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .diary {
+        background: #fffdf9;
+        width: 90%;
+        max-width: 520px;
+        padding: 32px;
+        border-radius: 12px;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        position: relative;
+    }
+
+    .diary::before {
+        content: "";
+        position: absolute;
+        left: 22px;
+        top: 0;
+        bottom: 0;
+        width: 3px;
+        background: #cfa6b4;
+        border-radius: 2px;
+    }
+
+    h1 {
+        text-align: center;
+        font-family: "Brush Script MT", cursive;
+        color: #9b4f6c;
+        margin-bottom: 8px;
+    }
+
+    .date {
+        text-align: right;
+        font-size: 13px;
+        color: #777;
+        margin-bottom: 22px;
+    }
+
+    .entry {
+        font-size: 17px;
+        line-height: 1.8;
+        color: #333;
+    }
+
+    button {
+        margin-top: 25px;
+        background: #9b4f6c;
+        color: #fff;
+        border: none;
+        padding: 10px 22px;
+        border-radius: 22px;
+        font-size: 15px;
+        cursor: pointer;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    button:hover {
+        background: #84405a;
+    }
+
+    .hidden {
+        display: none;
+        margin-top: 20px;
+        font-style: italic;
+        color: #444;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="diary">
+    <h1>A Page Just for You</h1>
+    <div class="date">Whenever you need it</div>
+
+    <div class="entry">
+        heyy bunny,<br><br>
+        If today feels heavy, I want you to know this —
+        you don’t have to be strong all the time.
+        It’s okay to pause. It’s okay to feel tired.
+        <br><br>
+        I may not be beside you physically, but my care for you
+        is steady and real. You are not facing anything alone.
+    </div>
+
+    <button onclick="turnPage()">Turn the Page</button>
+
+    <div id="page2" class="entry hidden">
+        No matter how loud the world gets,
+        you have a quiet place with me.
+        A place where you are understood,
+        where nothing is expected from you,
+        and where you are enough just as you are.
+        <br><br>
+        Take a deep breath. I’m here.
+        <img src="us.jpg" width="100%" style="border-radius:10px; margin:15px 0;"
+    </div>
+
+    <div id="sign" class="hidden entry">
+        With calm, care, and warmth,<br>
+        ❤️
+        SRI
+    </div>
+</div>
+
+<!-- Background Music -->
+<audio id="bgm" loop>
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+function turnPage() {
+    document.getElementById("page2").style.display = "block";
+    document.getElementById("sign").style.display = "block";
+    document.getElementById("bgm").play();
+}
+</script>
+
+</body>
+</html>
